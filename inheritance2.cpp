@@ -18,26 +18,43 @@ class car : public vehical
 		{
 			cout<<"exeeding speedlimit for cars"<<endl;
 		}
+		else
+		{
+			cout<<"within the speedlimit"<<endl;
+		}
 	}
 };
 
 class bike : public vehical
 {
 	public:
+	int speedlimit()
+	{
 		if(speed>60)
 		{
 			cout<<"exeeding speedlimit for motorbikes"<<endl;
 		}
-		
+		else
+		{
+			cout<<"within the speedlimit"<<endl;
+		}
+	}	
 };
 
 class truck : public vehical
 {
 	public:
+	int speedlimit()
+	{
 		if(speed>40)
 		{
 			cout<<"exeeding speedlimit for trucks"<<endl;
 		}
+		else
+		{
+			cout<<"within the speedlimit"<<endl;
+		}
+	}
 };
 
 int main()
@@ -49,4 +66,7 @@ int main()
 	b1.speed = 60;
 	t1.speed = 40;
 	c1.speedlimit();
+	b1.speedlimit();
+	t1.speedlimit();
 }
+
