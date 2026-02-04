@@ -7,6 +7,7 @@ class Employee{
 		string Name;
 		double BasicSalary;
 		string EmpoyeeType;
+		// bonus will be different for different types of employees
 	public:
 		void getEmployee(){
 			cout <<"Enter employee ID: "<< endl;
@@ -41,3 +42,4 @@ int main()
 	p1.calcBonus(e1);
 	return 0;
 }
+
