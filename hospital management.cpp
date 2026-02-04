@@ -54,8 +54,9 @@ public:
 
     void showInPatient() {
         cout << "PATIENT DETAILS" << endl;
-        cout << "Room No.\tDays\tCharge per day" << endl;
-        cout << roomNo << "\t\t" << days << "\t" << chargePerDay << endl;
+        cout << "Room No: "<< roomNo <<endl <<"Days:" << days << endl << "Charge per day: " << chargePerDay << endl;
+        //cout << roomNo << "\t\t" << days << "\t" << chargePerDay << endl;
+        
     }
 
     void calculateBill() {
