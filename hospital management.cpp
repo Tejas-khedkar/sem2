@@ -1,9 +1,7 @@
-// HospitalManagement.cpp
-// Small Hospital Management System using multilevel inheritance
-
 #include <iostream>
 #include <string>
 using namespace std;
+// class person > class patient > class InPatient 
 
 class Person {
 public:
@@ -18,8 +16,7 @@ public:
     }
 
     void showPerson() {
-        cout << "
-Name: " << name << endl;
+        cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
     }
 };
@@ -56,8 +53,7 @@ public:
     }
 
     void showInPatient() {
-        cout << "
------ PATIENT DETAILS -----" << endl;
+        cout << "PATIENT DETAILS" << endl;
         cout << "Room No.\tDays\tCharge per day" << endl;
         cout << roomNo << "\t\t" << days << "\t" << chargePerDay << endl;
     }
@@ -84,8 +80,7 @@ public:
     }
 
     void discharge() {
-        cout << "
------ DISCHARGE SUMMARY -----" << endl;
+        cout << "DISCHARGE SUMMARY " << endl;
         showPerson();
         showPatient();
         cout << "Room No.: " << roomNo << endl;
@@ -98,23 +93,18 @@ public:
 int main() {
     InPatient ip;
 
-    // Enter all details
     ip.getPerson();
     ip.getPatient();
     ip.getInPatient();
 
-    // Display all information
     ip.showPerson();
     ip.showPatient();
     ip.showInPatient();
 
-    // Calculate initial bill
     ip.calculateBill();
 
-    // Extend stay and recalculate
     ip.extendStay();
 
-    // Discharge patient
     ip.discharge();
 
     return 0;
